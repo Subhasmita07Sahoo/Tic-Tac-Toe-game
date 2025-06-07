@@ -1,5 +1,7 @@
 # Tic-Tac-Toe Game
 
+## Deployed Link:- https://subhasmita07sahoo.github.io/Tic-Tac-Toe-game/
+
 ## Project Overview
 This is a classic Tic-Tac-Toe game implemented using HTML, CSS, and JavaScript. The game allows two players to take turns marking the spaces in a 3×3 grid with "X" and "O". The goal is to be the first player to get three of their marks in a horizontal, vertical, or diagonal row.
 
