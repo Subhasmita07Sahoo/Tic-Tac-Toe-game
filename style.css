@@ -1,0 +1,105 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#game-status {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  min-height: 28px;
+  color: #555;
+}
+
+/* Game board grid */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Individual cells */
+.cell {
+  background: #e0e7ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3b82f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1; /* Keep square */
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.cell:hover {
+  background-color: #c7d2fe;
+}
+
+/* Disable pointer when game over */
+.cell.disabled {
+  cursor: default;
+  color: #060000;
+  background-color: #f3f4f6;
+}
+
+#reset-btn {
+  background-color: #b35380;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 480px) {
+  .container {
+    max-width: 300px;
+    padding: 15px 20px;
+  }
+
+  .cell {
+    font-size: 2.2rem;
+  }
+
+  #reset-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
